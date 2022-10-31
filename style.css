@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    background: #f9f4ef;
+}
+
+.form-number {  
+    width: 400px;
+    height: 450px;
+    background: #eaddcf;
+    padding: 30px;
+    margin: auto;
+    margin-top: 170px;
+    border-radius: 12px;
+    box-shadow: 25px 20px 10px #000;
+    border: medium;
+    color: #8c7851;
+}
+
+.form-number h4 {
+    background-color: #eaddcf;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-number #controls, #dia, #mes{
+    width: 100%;
+    background: #eaddcf;
+    padding: 10px;
+    border-radius: 9px;
+    margin-bottom: 16px;
+    border: 1px solid #8c7851;
+    font-size: 18px;
+    text-align: center;
+    color: #8c7851;
+}
+
+.form-number #controls {
+    color: green;
+}
+
+.form-number #calcular, #borrar {
+    width: 100%;
+    background: #8c7851;
+    border: none;
+    padding: 12px;
+    color: #fffffe;
+    margin: 16px 0;
+    border-radius: 9px;
+    font-size: 16px;
+} 
+
+::placeholder {
+    color: #716040;
+    text-align: center; 
+}
+
