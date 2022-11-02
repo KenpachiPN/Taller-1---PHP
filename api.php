@@ -68,5 +68,4 @@ class galeria{
 }
 $obj = new galeria($_DATA->codigo, $_DATA->unidad);
 echo json_encode(["Factura" => $obj->buscar()],JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
-
 ?>

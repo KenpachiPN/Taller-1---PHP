@@ -1,8 +1,5 @@
 
 addEventListener("DOMContentLoaded", (e) => {
-    // De la galería de productos, el usuario introducirá 
-    // el código y el número de unidades del producto que desea comprar.
-    //  El programa determinará el total a pagar, como una factura. Ejemplo de factura
     let myForm = document.querySelector("#formulario");
     myForm.addEventListener("submit", async (e) => {
         e.preventDefault();
