@@ -1,13 +1,12 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
     background: #f9f4ef;
 }
 
-.form-number {  
+.form-number {
     width: 400px;
-    height: 380px;
+    height: 450px;
     background: #eaddcf;
     padding: 30px;
     margin: auto;
@@ -27,7 +26,9 @@
     margin-bottom: 20px;
 }
 
-.form-number #dia, #mes{
+.form-number #sexo,
+#edad,
+#carrera {
     width: 100%;
     background: #eaddcf;
     padding: 10px;
@@ -39,7 +40,8 @@
     color: #8c7851;
 }
 
-.form-number #calcular, #borrar {
+.form-number #calcular,
+#borrar {
     width: 100%;
     background: #8c7851;
     border: none;
@@ -52,27 +54,30 @@
 
 ::placeholder {
     color: #716040;
-    text-align: center;   
+    text-align: center;
 }
 
-#container-table {
-    width: 490px;
-    height: 380px;
-    padding: 30px;
-    margin-top: -280px;
-    margin-left: 800px;
+#container-form {
+    background-color: #eaddcf;
+    width: 40%;
+    margin: auto;
+    margin-top: -300px;
+    margin-right: 250px;
 
 }
 
 table {
     background-color: #eaddcf;
-    text-align: left;      
+    text-align: left;
     border-collapse: collapse;
     width: 100%;
+    margin: auto;
 }
 
-th, td {
-    padding: 20px;
+th,
+td {
+    padding: 5px;
+    text-align: left;
 }
 
 th {
@@ -81,12 +86,12 @@ th {
     color: #8c7851;
 }
 
-td, #table-input {
+td,
+#table-input {
     background-color: #eaddcf;
-    border: none;
 }
 
- caption {
+caption {
     font-style: italic;
     font-size: 1.5em;
     color: #8c7851;
@@ -97,4 +102,5 @@ td, #table-input {
 #table-input {
     text-align: left;
     color: #716040;
-} 
+    border: none;
+}

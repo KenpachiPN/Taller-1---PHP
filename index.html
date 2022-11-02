@@ -13,47 +13,38 @@
 
 <body>
     <form id="formulario" action="api.php" method="post" class="form-number">
-        <h4> Ejercicio 2</h4>
-        <!-- // De la galería de productos, el usuario introducirá 
-        // el código y el número de unidades del producto que desea comprar.
-        //  El programa determinará el total a pagar, como una factura. Ejemplo de factura -->
-        <input type="text" minlength="1" maxlength="3" name="codigo" id="dia" class="form_input"
-            placeholder="Ingrese código del producto" required>
-        <input type="number" name="unidad" id="mes" class="form_input" placeholder="Ingrese las unidades que desea"
-            required>
+        <h4> Ejercicio 3</h4>
+        <input type="text" minlength="0" maxlength="1" name="sexo" id="sexo" value="M" class="form_input" placeholder="Su sexo ('M o F')" required>
+        <input type="number" minlength="1" maxlength="2" name="edad" id="edad" value="23" class="form_input" placeholder="Ingrese su edad" required>
+        <input type="text" minlength="0" maxlength="1" name="carrera" id="carrera" value="A" class="form_input" placeholder="Ingrese su carrera ('A, B, C')" required>
         <input type="submit" id="calcular" data-operacion="Guardar" value="Guardar">
         <input type="submit" id="borrar" data-operacion="Limpiar" value="Limpiar">
     </form>
-    <div id="container-table">
+    <div id="container-form">
         <table>
-            <caption>Factura de sus productos </caption>
+            <caption>Carrera con menor promedio de edad de sus alumnos que son varones </caption>
             <thead>
                 <tr>
-                    <th>Código</th>
-                    <th>Producto</th>
-                    <th>Unidades</th>
-                    <th>Total a pagar</th>
+                    <th>Carrera</th>
+                    <th>Promedio de edad</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
                     <td>
-                        <input type="text" name="codigoProducto" id="table-input" placeholder=""  disabled readonly>
+                        <input type="text" name="Carrera" id="table-input" placeholder=""  disabled readonly>
                    </td>
                    <td>
-                    <input type="text" name="producto" id="table-input" placeholder="" disabled readonly>
-                    </td>
-                    <td>
-                        <input type="text" name="unidades" id="table-input" placeholder="" disabled readonly>
-                    </td>
-                   <td>
-                    <input type="text" name="total" id="table-input" placeholder="" disabled readonly>
-                    </td>
+                    <input type="text" name="promEdad" id="table-input" placeholder=""  disabled readonly>
+               </td>
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div>  
+    <pre>
+
+    </pre>    
 </body>
 
 </html>

@@ -1,0 +1,20 @@
+[
+    {
+        "Universidad": {
+            "Sexo": "M",
+            "Edad": 23
+        }
+    },
+    {
+        "Universidad": {
+            "Sexo": "M",
+            "Edad": 23
+        }
+    },
+    {
+        "Universidad": {
+            "Sexo": "M",
+            "Edad": 50
+        }
+    }
+]
