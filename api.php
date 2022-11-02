@@ -4,81 +4,69 @@
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json; charset=utf-8');
     $_DATA = json_decode(file_get_contents("php://input"));
-class zodiacal{ 
-    public $dia;
-    public $mes;
+class galeria{ 
+    public $codigo;
     public $lista;
-    public function __construct(int $dia, int $mes){
-        $this->dia = $dia;
-        $this->mes = $mes;
+    public $unidad;
+    public function __construct(int $codigo, int $unidad){
+        $this->codigo = $codigo;
+        $this->unidad = $unidad;
         $this->lista = (object) [
-            "Aries" =>  [
-                "0" => [18, 4],
-                "1" => [13, 5],
+             // De la galería de productos, el usuario introducirá 
+             // el código y el número de unidades del producto que desea comprar.
+             //  El programa determinará el total a pagar, como una factura. Ejemplo de factura
+            111 =>  [
+                "Nombre" => "Camisa",
+                "Precio" => 50,
             ],
-            "Tauro" =>  [
-                "0" => [14, 5],
-                "1" => [19, 6],
+            222 =>  [
+                "Nombre" => "Pantalon",
+                "Precio" => 52,
             ],
-            "Gémenis" =>  [
-                "0" => [20, 6],
-                "1" => [20, 7],
+            333 =>  [
+                "Nombre" => "Medias",
+                "Precio" => 45,
             ],
-            "Cáncer" =>  [
-                "0" => [21, 7],
-                "1" => [9, 8],
+            444 =>  [
+                "Nombre" => "Gorra",
+                "Precio" => 85,
             ],
-            "Leo" =>  [
-                "0" => [10, 8],
-                "1" => [15, 9],
+            555 =>  [
+                "Nombre" => "Buso",
+                "Precio" => 45,
             ],
-            "Virgo" =>  [
-                "0" => [16, 9],
-                "1" => [30, 10],
+            888 =>  [
+                "Nombre" => "Reloj",
+                "Precio" => 98,
             ],
-            "Libra" => [
-                "0" => [31, 10],
-                "1" => [22, 11],
+            666 =>  [
+                "Nombre" => "Pulsera",
+                "Precio" => 832,
             ],
-            "Escorpio" =>    [
-                "0" => [23, 11],
-                "1" => [29, 11],
-            ],
-            "Ofiuco" =>    [
-                "0" => [30, 11],
-                "1" => [17, 12],
-            ],
-            "Sagitario" =>    [
-                "0" => [18, 12],
-                "1" => [18, 1],
-            ],
-            "Capricornio" =>    [
-                "0" => [19, 1],
-                "1" => [15, 2],
-            ],
-            "Acuario" =>    [
-                "0" => [16, 2],
-                "1" => [11, 3],
-            ],
-            "Piscis" =>    [
-                "0" => [12, 3],
-                "1" => [17, 4],
-            ]
         ];
     }
-    public function buscar():string{
-        $res = "";
-        foreach ($this->lista as $key => $value) {
-            if(($this->dia == 28 && 3 == $this->mes) || ($this->dia == 29 && 3 == $this->mes)){
-                $res = "Cetus";
-            }else if(($this->dia >= $value[0][0] && $value[0][1] == $this->mes) || ($this->dia <= $value[1][0] && $value[1][1] == $this->mes)){
-                $res = $key;
-            }
+    public function buscar():object{
+        $res = (array) $this->lista;
+        $men;
+        if(array_key_exists($this->codigo, $res)){
+            $men = (object) [
+                "Codigo" => $this->codigo,
+                "Producto" => $res[$this->codigo]["Nombre"],
+                "UnidadesCompradas" => $this->unidad,
+                "Total" => $res[$this->codigo]["Precio"] * $this->unidad,
+            ];
+        }else{
+            $men = (object) [
+                "Codigo" => "Código inválido",
+                "Producto" => "Producto inválido",
+                "UnidadesCompradas" => 0,
+                "Total" => "Ingrese un código válido",
+            ];
         }
-        return $res;
+        return $men;
     }
 }
-$obj = new zodiacal($_DATA->dia, $_DATA->mes);
-echo json_encode(["mensaje" => $obj->buscar()],JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+$obj = new galeria($_DATA->codigo, $_DATA->unidad);
+echo json_encode(["Factura" => $obj->buscar()],JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ?>

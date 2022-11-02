@@ -1,14 +1,14 @@
 
 addEventListener("DOMContentLoaded", (e) => {
-    // 1.Este programa muestra el signo zodiacal de una persona. 
-    // Para ello el usuario debe introducir únicamente el día y 
-    // el mes de nacimiento y el programa determinará inmediatamente 
-    // el signo zodiacal de la persona.
+    // De la galería de productos, el usuario introducirá 
+    // el código y el número de unidades del producto que desea comprar.
+    //  El programa determinará el total a pagar, como una factura. Ejemplo de factura
     let myForm = document.querySelector("#formulario");
     myForm.addEventListener("submit", async (e) => {
         e.preventDefault();
         if (e.submitter.dataset.operacion == "Limpiar") {
             myForm.reset();
+            document.querySelectorAll("tbody input").forEach(res => res.value="");
         } else {
             let data = Object.fromEntries(new FormData(e.target));
             let config = {
@@ -17,7 +17,10 @@ addEventListener("DOMContentLoaded", (e) => {
             };
             let peticion = await fetch(myForm.action, config);
             let res = await peticion.json();
-            document.querySelector("#controls").value = "Su signo zodiacal es " + res.mensaje ;
+            document.querySelector(`[name="codigoProducto"]`).value = res.Factura.Codigo;
+            document.querySelector(`[name="producto"]`).value = res.Factura.Producto;
+            document.querySelector(`[name="unidades"]`).value = res.Factura.UnidadesCompradas;
+            document.querySelector(`[name="total"]`).value = `$ ${res.Factura.Total}`;
         }
     })
 })  
