@@ -6,12 +6,12 @@
 
 .form-number {
     width: 400px;
-    height: 450px;
+    height: 504;
     background: #eaddcf;
     padding: 30px;
     margin: auto;
     margin-top: 170px;
-    margin-left: 290px;
+    margin-left: 100px;
     border-radius: 12px;
     box-shadow: 25px 20px 10px #000;
     border: medium;
@@ -59,11 +59,10 @@
 
 #container-form {
     background-color: #eaddcf;
-    width: 40%;
+    width: 400px;
     margin: auto;
-    margin-top: -300px;
-    margin-right: 250px;
-
+    margin-top: -430px;
+    margin-right: 920px;
 }
 
 table {
@@ -82,8 +81,12 @@ td {
 
 th {
     background-color: #eaddcf;
-    border-bottom: solid 5px #8c7851;
     color: #8c7851;
+}
+
+tbody {
+    border-bottom: solid 5px #8c7851;
+
 }
 
 td,

@@ -14,37 +14,123 @@
 <body>
     <form id="formulario" action="api.php" method="post" class="form-number">
         <h4> Ejercicio 3</h4>
-        <input type="text" minlength="0" maxlength="1" name="sexo" id="sexo" value="M" class="form_input" placeholder="Su sexo ('M o F')" required>
-        <input type="number" minlength="1" maxlength="2" name="edad" id="edad" value="23" class="form_input" placeholder="Ingrese su edad" required>
-        <input type="text" minlength="0" maxlength="1" name="carrera" id="carrera" value="A" class="form_input" placeholder="Ingrese su carrera ('A, B, C')" required>
+        <input type="text" minlength="0" maxlength="1" name="sexo" id="sexo" class="form_input"
+            placeholder="Su sexo ('M o F')"  required>
+        <input type="number" minlength="0" maxlength="2" name="edad" id="edad" class="form_input"
+            placeholder="Ingrese su edad"  required>
+        <input type="text" minlength="0" maxlength="1" name="carrera" id="carrera" class="form_input"
+            placeholder="Ingrese su carrera ('A, B, C')"  required>
         <input type="submit" id="calcular" data-operacion="Guardar" value="Guardar">
+        <input type="submit" id="calcular" data-operacion="Mostrar" value="Mostrar">
         <input type="submit" id="borrar" data-operacion="Limpiar" value="Limpiar">
     </form>
     <div id="container-form">
         <table>
-            <caption>Carrera con menor promedio de edad de sus alumnos que son varones </caption>
+            <caption>Datos estadisticos de las carreras </caption>
             <thead>
                 <tr>
                     <th>Carrera</th>
-                    <th>Promedio de edad</th>
+                    <th>Total de edades de los varones</th>
+                    <th>Promedio de varones</th>
+                    <th>Promedio de varones por el total de alumnos</th>
+                    <th>Total de alumnos</th>
+                    <th>Total de alumnos Varones</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
                     <td>
-                        <input type="text" name="Carrera" id="table-input" placeholder=""  disabled readonly>
-                   </td>
-                   <td>
-                    <input type="text" name="promEdad" id="table-input" placeholder=""  disabled readonly>
-               </td>
+                        <input type="text" name="CarreraA" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="EdadVaronesA" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="promVaronesA" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="promVarAlumnA" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="totalAlumnA" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="totalAlumnVarA" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                </tr>
+            </tbody>
+
+            <thead>
+                <tr>
+                    <th>Carrera</th>
+                    <th>Total de edades de los varones</th>
+                    <th>Promedio de varones</th>
+                    <th>Promedio de varones por el total de alumnos</th>
+                    <th>Total de alumnos</th>
+                    <th>Total de alumnos Varones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" name="CarreraB" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="EdadVaronesB" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="promVaronesB" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="promVarAlumnB" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="totalAlumnB" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="totalAlumnVarB" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                </tr>
+            </tbody>
+
+            <thead>
+                <tr>
+                    <th>Carrera</th>
+                    <th>Total de edades de los varones</th>
+                    <th>Promedio de varones</th>
+                    <th>Promedio de varones por el total de alumnos</th>
+                    <th>Total de alumnos</th>
+                    <th>Total de alumnos Varones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" name="CarreraC" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="EdadVaronesC" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="promVaronesC" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="promVarAlumnC" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="totalAlumnC" id="table-input" placeholder="" disabled readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="totalAlumnVarC" id="table-input" placeholder="" disabled readonly>
+                    </td>
                 </tr>
             </tbody>
         </table>
-    </div>  
-    <pre>
-
-    </pre>    
+    </div>
+    <pre></pre>
 </body>
 
 </html>
